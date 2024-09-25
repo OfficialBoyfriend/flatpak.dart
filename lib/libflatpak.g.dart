@@ -4,17 +4,18 @@
 // ignore_for_file: type=lint
 import 'dart:ffi' as ffi;
 
-class NativeLibrary {
+/// Bindings for the Flatpak D-Bus API.
+class FlatpakLibrary {
   /// Holds the symbol lookup function.
   final ffi.Pointer<T> Function<T extends ffi.NativeType>(String symbolName)
       _lookup;
 
   /// The symbols are looked up in [dynamicLibrary].
-  NativeLibrary(ffi.DynamicLibrary dynamicLibrary)
+  FlatpakLibrary(ffi.DynamicLibrary dynamicLibrary)
       : _lookup = dynamicLibrary.lookup;
 
   /// The symbols are looked up with [lookup].
-  NativeLibrary.fromLookup(
+  FlatpakLibrary.fromLookup(
       ffi.Pointer<T> Function<T extends ffi.NativeType>(String symbolName)
           lookup)
       : _lookup = lookup;
@@ -21032,7 +21033,7 @@ const String G_GNUC_PRETTY_FUNCTION = '';
 
 const int G_ANALYZER_ANALYZING = 0;
 
-const String G_STRLOC = '/tmp/CSRNRS/temp_for_macros.hpp:53';
+const String G_STRLOC = '/tmp/XHPWUP/temp_for_macros.hpp:53';
 
 const int FALSE = 0;
 

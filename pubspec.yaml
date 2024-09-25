@@ -18,10 +18,12 @@ dev_dependencies:
   test: ^1.24.0
 
 ffigen:
-  output: "lib/src/libflatpak.dart"
+  name: "FlatpakLibrary"
+  description: "Bindings for the Flatpak D-Bus API."
   headers:
     entry-points:
       - "/usr/include/flatpak/flatpak.h"
+  output: "lib/libflatpak.g.dart"
 
   functions:
     exclude:
